@@ -1,0 +1,109 @@
+{
+  "_comment": "Illustrative example only - values are not from a real paper. Fill one object per experiment; one signature per direction.",
+  "study": {
+    "pmid": "12345678",
+    "study_design": [
+      "case-control"
+    ],
+    "citation_mode": "Auto",
+    "evidence": {
+      "study_design": "Patients with colorectal cancer and age- and sex-matched healthy controls were recruited"
+    },
+    "confidence": {
+      "pmid": 95,
+      "study_design": 85
+    }
+  },
+  "experiments": [
+    {
+      "id": 1,
+      "location_of_subjects": [
+        "China"
+      ],
+      "host_species": "Homo sapiens",
+      "body_site": "Feces",
+      "condition": "Colorectal cancer",
+      "group_0_name": "Healthy control (HC)",
+      "group_1_name": "Colorectal cancer (CRC)",
+      "group_1_definition": "Patients with histologically confirmed colorectal cancer (CRC) before treatment",
+      "group_0_sample_size": 40,
+      "group_1_sample_size": 52,
+      "antibiotics_exclusion": "3 months",
+      "sequencing_type": "16S",
+      "variable_region_lower": 3,
+      "variable_region_upper": 4,
+      "sequencing_platform": [
+        "Illumina"
+      ],
+      "data_transformation": "relative abundances",
+      "statistical_test": [
+        "LEfSe"
+      ],
+      "significance_threshold": "0.05",
+      "mht_correction": "No",
+      "lda_score_above": "2",
+      "matched_on": [
+        "age",
+        "sex"
+      ],
+      "confounders_controlled_for": [],
+      "alpha_diversity": {
+        "Shannon": "decreased",
+        "Chao1": "unchanged"
+      },
+      "signatures": [
+        {
+          "source": "Figure 3A",
+          "description": "Differentially abundant taxa identified by linear discriminant analysis effect size (LEfSe) between colorectal cancer (CRC) and healthy control (HC) groups",
+          "abundance_in_group_1": "increased",
+          "taxa": [
+            {
+              "paper_name": "Fusobacterium nucleatum",
+              "name": "Fusobacterium nucleatum",
+              "rank": "species",
+              "ncbi_id": "851"
+            },
+            {
+              "paper_name": "g__Peptostreptococcus",
+              "name": "Peptostreptococcus",
+              "rank": "genus",
+              "ncbi_id": "1257"
+            }
+          ],
+          "expected_taxa_count": 2
+        },
+        {
+          "source": "Figure 3A",
+          "description": "Differentially abundant taxa identified by linear discriminant analysis effect size (LEfSe) between colorectal cancer (CRC) and healthy control (HC) groups",
+          "abundance_in_group_1": "decreased",
+          "taxa": [
+            {
+              "paper_name": "Faecalibacterium prausnitzii",
+              "name": "Faecalibacterium prausnitzii",
+              "rank": "species",
+              "ncbi_id": "853"
+            }
+          ],
+          "expected_taxa_count": 1
+        }
+      ],
+      "evidence": {
+        "body_site": "Fresh stool samples were collected",
+        "sequencing": [
+          "V3-V4 region of the 16S rRNA gene",
+          "Illumina MiSeq"
+        ],
+        "signatures": "[figure] Fig 3A: 2 taxa green (CRC), 1 red (HC); legend checked"
+      },
+      "confidence": {
+        "body_site": 95,
+        "sequencing_type": 95,
+        "mht_correction": 70,
+        "signature_members": 95
+      },
+      "rulings_checked": {
+        "mht_correction": "Example: LEfSe -> No per TheTosin #393 (mentor-rulings §8). Required for every value scored below 70: issue numbers consulted, or terms searched with no ruling found."
+      }
+    }
+  ]
+}
